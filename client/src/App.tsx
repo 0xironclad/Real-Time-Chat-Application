@@ -1,12 +1,15 @@
-import { Button } from "@/components/ui/button"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Auth from './pages/auth'
+import Home from './pages/home'
 
 function App() {
   return (
-    <div>
-      <Button variant="outline" onClick={() => {
-        alert("Hello")
-      }}>Click me</Button>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </Router>
   )
 }
 
